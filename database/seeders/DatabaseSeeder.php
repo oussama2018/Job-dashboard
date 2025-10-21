@@ -21,6 +21,6 @@ class DatabaseSeeder extends Seeder
             'last_name'=>'Kmar',
             'email' => 'oussama@example.com',
         ]);
-        Job::factory(200)->create();
+        $this->call(JobSeeder::class);
     }
 }
