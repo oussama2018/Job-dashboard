@@ -11,11 +11,10 @@ class Job extends Model
     use HasFactory;
     protected $table='job_listings';
     protected $guarded=[];
-
     public function employer(){
         return $this->belongsTo(Employer::class);
     }
     public function tag(){
-        return $this->belongsToMany(Tag::class,foreignPivotKey:'job_listings_id');
+        return $this->belongsToMany(Tag::class, foreignPivotKey:'job_listings_id');
     }
 }
