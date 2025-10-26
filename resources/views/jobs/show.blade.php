@@ -1,7 +1,10 @@
 <x-layout>
-<x-slot:heading>Job Listings</x-slot:heading>
-    <p class="block border border-gray-200 px-2 py-4"><strong>{{$jobs->title}}</strong>: pays {{$jobs->salary}} per year.</p>
-    <p>
-        <x-button href="/jobs/{{ $jobs->id }}/edit" class="mt-6">Edit Job</x-button>
-    </p>
+<x-slot:heading>Job</x-slot:heading>
+    <div class="border border-gray-200 p-4">
+    <p class="text-blue-500 font-bold">{{$jobs->employer->name}}</p>
+    <p><strong>{{$jobs->title}}</strong>: pays {{$jobs->salary}} pery year. </p>
+    </div>
+    <x-button href="/jobs/{{ $jobs->id }}/edit" class="mt-4">Edit Job</x-button>
+
+
 </x-layout>

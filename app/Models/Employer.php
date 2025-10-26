@@ -11,7 +11,7 @@ class Employer extends Model
     use HasFactory;
     protected $table='employers';
     protected $guarded=[];
-    public function job(){
+    public function jobs(){
         return $this->hasMany(Job::class);
     }
 }

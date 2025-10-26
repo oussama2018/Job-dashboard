@@ -12,6 +12,6 @@ class Tag extends Model
     protected $table='tags';
     protected $guarded=[];
     public function job(){
-        return $this->belongsToMany(Job::class, relatedPivotKey:'job_listings_id');
+        return $this->belongsToMany(Job::class, relatedPivotKey:'job_listing_id');
     }
 }
