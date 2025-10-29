@@ -11,7 +11,7 @@ class Tag extends Model
     use HasFactory;
     protected $table='tags';
     protected $guarded=[];
-    public function job(){
-        return $this->belongsToMany(Job::class, relatedPivotKey:'job_listing_id');
+    public function jobs(){
+        return $this->belongsToMany(Job::class,relatedPivotKey:'job_listing_id');
     }
 }
